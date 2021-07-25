@@ -3,28 +3,42 @@ protected:
     double area = 0;
     double girth = 0;
 public:
-    double getArea(){return area;}
-    double getGirth(){return girth;}
+    double getArea() const{return area;}
+    double getGirth() const{return girth;}
 };
 
 class circle : public shape{
 private:
-    int radius = 0;
+    double radius = 0;
 public:
-    void setradius(int r);
+    void setradius(double r);
 };
-void circle::setradius(int r){
-    area = r * r * 3.14159;
-    girth = 2 * r * 3.14159;
+void circle::setradius(double r){
+    if (r > 0) {
+        radius = r;
+        area = radius * radius * 3.14159;
+        girth = 2 * radius * 3.14159;
+    }
+    else {
+        std::cout << "You input a wrong radius, Please input a correct number\n";
+    }
 }
 
 class retangle : public shape{
-    int height = 0;
-    int width = 0;
+    double height = 0;
+    double width = 0;
 public:
-    void setHandW(int h,int w);
+    void setHandW(double h,double w);
 };
-void retangle::setHandW(int h, int w){
-    area = h * w;
-    girth = (h + w) * 2;
+void retangle::setHandW(double h, double w){
+    if(h > 0 && w > 0){
+        height = h;
+        width = w;
+        area = height * width;
+        girth = (height + width) * 2;
+    }
+    else{
+        std::cout << "You input a wrong height or width, Please input a correct number\a\n" ;
+    }
+
 }
