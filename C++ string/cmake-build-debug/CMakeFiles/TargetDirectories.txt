@@ -1,3 +1,0 @@
-/Users/jing/Desktop/C++/C++ string/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/jing/Desktop/C++/C++ string/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/jing/Desktop/C++/C++ string/cmake-build-debug/CMakeFiles/cl.dir
