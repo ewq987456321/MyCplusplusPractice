@@ -21,10 +21,10 @@ class circle : public shape {
 private:
     double radius = 0;
 public:
-    void setradius(double r);
+    void set_radius(double r); //宣告set_radius方法的原型
 };
 
-void circle::setradius(double r) {
+void circle::set_radius(double r) { //set_radius 實作方法
     if (r > 0) {
         radius = r;
         area = radius * radius * 3.14159;
@@ -34,14 +34,14 @@ void circle::setradius(double r) {
     }
 }
 
-class retangle : public shape {
+class rectangle : public shape {
     double height = 0;
     double width = 0;
 public:
-    void setHandW(double h, double w);
+    void set_HandW(double h, double w); //宣告原形
 };
 
-void retangle::setHandW(double h, double w) {
+void rectangle::set_HandW(double h, double w) { //第41行先告原型，以下為實作方法
     if (h > 0 && w > 0) {
         height = h;
         width = w;
