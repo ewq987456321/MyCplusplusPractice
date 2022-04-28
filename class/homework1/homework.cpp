@@ -80,7 +80,7 @@ int main() {
                         printf("無此人資訊！\n");
                     else{
                         printf("刪除成功");
-                        printf("共刪除%d筆資料",count_del);
+                        printf("共刪除%d筆資料\n",count_del);
                     }
                 }
                 fclose(fptr);

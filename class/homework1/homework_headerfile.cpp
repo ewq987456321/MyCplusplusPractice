@@ -176,19 +176,29 @@ int print_positive_person_info(FILE *fptr) {
     return count_positive;
 }
 
+struct people{
+    char check[100] = {0};
+    char time[50] = {0};
+    char type[50] = {0};
+    char place[50] = {0};
+    char ID[100] = {0};
+};
+
 int delete_positive(FILE *fptr, char code[20]) {
     int count = 0, count_del = 0,count_data=0;
     FILE *temp = fopen("temp.cat", "w");
     while (!(feof(fptr))) {
-        char check[50], time[50], ID[20], type[20], place[50];
+        people people;
+        //char check[50], time[50], ID[20], type[20], place[50];
         do {
-            count = fscanf(fptr, "%s%s%s%s%s", check, time, type, place, ID);
+            count = fscanf(fptr, "%s%s%s%s%s", people.check, people.time, people.type, people.place, people.ID);
             if(count!=-1)
                 count_data += 1;
-        } while ((strcmp(check, "y") == 0 && strcmp(ID, code) == 0) && count != -1);
+        } while ((strcmp(people.check, "y") == 0 && strcmp(people.ID, code) == 0) && count != -1);
         if (count != -1){
-            fprintf(temp, "%s\t%s\t%s\t%s\t%s\n", check, time, type, place, ID);
+            fprintf(temp, "%s\t%s\t%s\t%s\t%s\n", people.check, people.time, people.type, people.place, people.ID);
             count_del += 1;
+
         }
     }
     fclose(temp);
