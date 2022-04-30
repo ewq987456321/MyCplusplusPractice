@@ -5,7 +5,6 @@
 #ifndef OBJECTIONPRACTICE2_MYCLASS_H
 #define OBJECTIONPRACTICE2_MYCLASS_H
 
-#endif //OBJECTIONPRACTICE2_MYCLASS_H
 
 class shape {
 protected:
@@ -53,3 +52,4 @@ void rectangle::set_HandW(double h, double w) { //第41行先告原型，以下�
 
 }
 
+#endif //OBJECTIONPRACTICE2_MYCLASS_H
