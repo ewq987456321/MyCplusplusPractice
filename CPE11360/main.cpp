@@ -83,7 +83,7 @@ int main(){
                 }
             }
         }
-        cout << "\nCase #" << j+1 << endl;
+        cout << "Case #" << j+1 << endl;
         for(int m = 0;m < num; m++){
             for(int n = 0;n < num; n++){
                 cout << (int)arr[m][n];
@@ -93,5 +93,6 @@ int main(){
         for(int i = 0; i < num; i++)
             free(arr[i]);
         free(arr);
+        cout << "\n";
     }
 }
