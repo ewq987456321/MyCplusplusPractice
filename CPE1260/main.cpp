@@ -9,7 +9,7 @@ int main() {
         int num;
         long long sum = 0;
         scanf("%d", &num);
-        int *arr = (int *)malloc(sizeof(int));
+        int *arr = (int *)malloc(sizeof(int) * num);
         for (int i = 0; i < num; i++) {
             scanf("%d", &arr[i]);
             if (i != 0) {
