@@ -23,7 +23,7 @@ int main() {
                 A = temp;
                 B = arr[i];
                 max_amount = A - B;
-                // temp = -1;
+                temp = -1;
             }
             if (arr[i] > A) {
                 temp = arr[i];
@@ -33,8 +33,8 @@ int main() {
                 max_amount = A - arr[i];
                 B = arr[i];
             }
-            // cout << max_amount << " " << temp << " " << plus << " " <<
-            // (arr[i] - B) << endl;
+            cout << max_amount << " " << temp << " " << plus << " "
+                 << (arr[i] - B) << endl;
         }
         cout << max_amount << endl;
         free(arr);
