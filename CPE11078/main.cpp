@@ -8,15 +8,29 @@ int main() {
     for (int k = 0; k < T; k++) {
         int num;
         long long max_amount = -99999999;
+        int A, B, temp = -1;
         cin >> num;
         int *arr = (int *)malloc(sizeof(int) * num);
         for (int i = 0; i < num; i++) {
             cin >> arr[i];
-            for (int j = 0; j < i && i != 0; j++) {
-                if ((arr[j] - arr[i]) > max_amount)
-                    max_amount = (arr[j] - arr[i]);
+            if (i == 0)
+                A = arr[i];
+            if (i == 1) {
+                B = arr[i];
+                max_amount = A - B;
+            }
+            if (temp != -1 && arr[i] < B) {
+                A = temp;
+                temp = -1;
+            }
+            if (arr[i] > A)
+                temp = A;
+            if (arr[i] < B) {
+                max_amount = A - arr[i];
+                B = arr[i];
             }
         }
         cout << max_amount << endl;
+        free(arr);
     }
 }
