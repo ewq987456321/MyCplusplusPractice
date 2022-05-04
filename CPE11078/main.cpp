@@ -24,11 +24,12 @@ int main() {
                 temp = -1;
             }
             if (arr[i] > A)
-                temp = A;
+                temp = arr[i];
             if (arr[i] < B) {
                 max_amount = A - arr[i];
                 B = arr[i];
             }
+            // cout << max_amount << " " << temp << endl;
         }
         cout << max_amount << endl;
         free(arr);
