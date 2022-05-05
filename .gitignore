@@ -3,7 +3,7 @@
 !class/*/**.h
 !class/*/**CMakeLists.txt
 
-**/CPE*/*
-!CPE*/**.cpp
-!CPE*/CMakeLists.txt
-!CPE*/**.h
+**/CPE/CPE*/*
+!CPE/CPE*/**.cpp
+!CPE/CPE*/CMakeLists.txt
+!CPE/CPE*/**.h
