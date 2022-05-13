@@ -111,8 +111,7 @@ Account *delAccount(Account account[], int *count_num, int *count_space) {
         printf("帳號不存在\n");
     printf("%d %d", *count_space, *count_num);
     if (*count_space > 6) {
-        Account *temp = (Account *)malloc(sizeof(Account) *
-                                          (*count_num + *count_space - 5));
+        Account *temp = (Account *)malloc(sizeof(Account) * (*count_num + *count_space - 5));
         for (int i = 0; i < *count_num; i++) {
             temp[i] = account[i];
         }
