@@ -7,7 +7,8 @@ struct Account {
     char password[11] = {0};
 };
 
-void searchAccount(Account account[], int count_num) {
+void searchAccount(Account account[], int count_num)
+{
     char target[100];
     int check = 0;
     printf("請輸入帳號: ");
@@ -23,7 +24,8 @@ void searchAccount(Account account[], int count_num) {
     }
 }
 
-void changePassword(Account account[], int count_num) {
+void changePassword(Account account[], int count_num)
+{
     char target[100];
     int check = 0;
     printf("請輸入帳號: ");
@@ -39,8 +41,7 @@ void changePassword(Account account[], int count_num) {
                 } while (strlen(password) > 10);
                 printf("請再輸入一次確認密碼: ");
                 scanf("%s", temp);
-                if (strcmp(temp, password) == 0)
-                    check = 1;
+                if (strcmp(temp, password) == 0) check = 1;
             } while (check != 1);
             strcpy(account[i].password, temp);
             check = 1;
@@ -53,7 +54,8 @@ void changePassword(Account account[], int count_num) {
         printf("修改成功\n");
 }
 
-Account *addAccount(Account account[], int *count_num, int *count_space) {
+Account *addAccount(Account account[], int *count_num, int *count_space)
+{
     if (count_space == 0) {
         Account *temp = (Account *)malloc(sizeof(Account) * (*count_num + 5));
         for (int i = 0; i < *count_num; i++) {
@@ -90,7 +92,8 @@ Account *addAccount(Account account[], int *count_num, int *count_space) {
     return account;
 }
 
-Account *delAccount(Account account[], int *count_num, int *count_space) {
+Account *delAccount(Account account[], int *count_num, int *count_space)
+{
     char target[50];
     int check = 0;
     printf("請輸入帳號: ");
@@ -107,9 +110,10 @@ Account *delAccount(Account account[], int *count_num, int *count_space) {
         }
         *count_num -= 1;
         *count_space += 1;
-    } else
+    }
+    else
         printf("帳號不存在\n");
-    printf("%d %d", *count_space, *count_num);
+    printf("space: %d| count: %d", *count_space, *count_num);
     if (*count_space > 6) {
         Account *temp = (Account *)malloc(sizeof(Account) * (*count_num + *count_space - 5));
         for (int i = 0; i < *count_num; i++) {
@@ -122,7 +126,8 @@ Account *delAccount(Account account[], int *count_num, int *count_space) {
     return account;
 }
 
-int main() {
+int main()
+{
     srand(time(NULL));
     int num;
     int count_num;

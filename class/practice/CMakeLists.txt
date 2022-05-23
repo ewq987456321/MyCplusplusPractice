@@ -3,4 +3,4 @@ project(practice)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(practice main.cpp)
+add_executable(practice Linked_List.cpp)
