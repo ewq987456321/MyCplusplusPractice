@@ -8,3 +8,6 @@
 !CPE/CPE*/CMakeLists.txt
 !CPE/CPE*/**.h
 ObjectionPractice2/cmake-build-debug
+3.cpp
+itsa.cpp
+help.cpp
