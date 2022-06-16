@@ -1,7 +1,7 @@
-#include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <ctype.h>
+#include <stdio.h>
 
 struct word {
     char words[20] = "";
