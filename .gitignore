@@ -2,9 +2,7 @@
 !class/*/**.cpp
 !class/*/**.h
 !class/*/**CMakeLists.txt
-!class/0613/*/**.cpp
-!class/0613/*/**.h
-!class/0613/*/CMakeLists.txt
+
 
 **/CPE/CPE*/*
 !CPE/CPE*/**.cpp
